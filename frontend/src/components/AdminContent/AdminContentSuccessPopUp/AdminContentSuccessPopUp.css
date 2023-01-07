@@ -1,0 +1,57 @@
+.overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    transition: opacity 500ms;
+    /* visibility: hidden; */
+    opacity: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.overlay:target {
+    visibility: visible;
+    opacity: 1;
+}
+.popup{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #e6e6e6;
+    height: 40%;
+    border-radius: 8px;
+    padding: 20px;
+    transition: all 5s ease-in-out;
+    
+}
+.popup svg{
+    height: 100px;
+    width: 100px;
+    color: #06D85F;
+}
+.appointmentButton{
+    border-radius: 50px;
+    color: #fff;
+    background-color: #06D85F;
+    outline: none;
+    border: none;
+    width: 30%;
+    height: 17%;
+    font-size: 22px;
+    cursor: pointer;
+    border: 2px solid;
+}
+.appointmentButton:hover{
+    border: 2px solid #06D85F;
+    background-color: #fff;
+    color:#06D85F;
+    /* transform: scale(.9); */
+}
+/* .appointmentButton:active{
+    transform: scale(1);
+} */

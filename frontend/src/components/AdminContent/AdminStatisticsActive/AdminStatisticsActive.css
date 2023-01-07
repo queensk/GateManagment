@@ -1,0 +1,41 @@
+.AdminStatisticsActive{
+    /* border: 1px solid; */
+    margin: 20px;
+    height: 100%;
+}
+.AdminStatisticsContainer{
+    display: flex
+}
+.user-count {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 5px;
+    border: 1px solid gray;
+    width: 20%;
+    font-size: 1.3rem;
+    color: #333;
+    box-shadow: 0px 4px 4px 5px rgba(0, 0, 0, 0.25);
+    padding: 10px;
+    margin: 20px
+}
+.user-count svg{
+    height: 30px;
+    width: 30px;
+} 
+.user-count-animation {
+    font-size: 5rem;
+    font-weight: bold;
+    animation: countUp 1s ease-out;
+}
+
+@keyframes countUp {
+    from {
+        transform: scale(1, 0);
+    }
+    to {
+        transform: scale(1, 1);
+    }
+}
+  

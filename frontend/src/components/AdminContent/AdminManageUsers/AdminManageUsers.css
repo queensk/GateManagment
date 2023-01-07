@@ -1,0 +1,77 @@
+.AdminManageNav {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  padding: 7px;
+}
+.AdminSearch {
+  width: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.AdminSearchTerm {
+  width: 60%;
+  border: 3px solid rgb(83, 148, 253);
+  border-right: none;
+  padding: 5px;
+  height: 30px;
+  border-radius: 5px 0 0 5px;
+  outline: none;
+  font-size: 20px;
+  box-shadow: 0px 4px 4px 5px rgba(0, 0, 0, 0.25);
+  /* color: #fff; */
+}
+.searchTerm:focus {
+  color: rgb(83, 148, 253);
+}
+
+.searchButton {
+  width: 40px;
+  height: 46px;
+  outline: none;
+  border: 1px solid rgb(83, 148, 253);
+  background: rgb(83, 148, 253);
+  text-align: center;
+  color: #fff;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  font-size: 17px;
+}
+.searchButton:hover {
+  color: #06d85f;
+  background-color: #fff;
+}
+ul.UserSearchData {
+  background-color: rgb(83, 148, 253);
+  margin: 0 14%;
+  padding: 0 2%;
+  width: 49%;
+  border-radius: 4px;
+  list-style: none;
+  color: #fff;
+  box-shadow: 0px 4px 4px 5px rgba(0, 0, 0, 0.25);
+  z-index: 1;
+  position: absolute;
+}
+ul.UserSearchData li {
+  padding: 6px;
+  display: flex;
+  justify-content: space-between;
+}
+ul.UserSearchData li:not(:last-child) {
+  border-bottom: 2px solid #fff;
+}
+.AdminDeleteUser {
+  width: 60px;
+  outline: none;
+  background-color: red;
+  color: #fff;
+}
+.AdminEditUsers {
+  width: 60px;
+  outline: none;
+  background-color: #06d85f;
+  color: #fff;
+}

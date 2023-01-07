@@ -1,0 +1,75 @@
+.appointmentContainer{
+    position: absolute;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    top: 100px;
+    width: 100%;
+    height: 100%;
+    flex-grow: 11;
+    padding: 0;
+    margin: 0;
+    background-color: #f78d03;
+    opacity: 85%;
+    background-image: radial-gradient(
+    circle farthest-corner at 10% 20%,
+    rgb(246, 241, 235) 0%,
+    rgba(255, 211, 165, 1) 90%
+  );
+}
+
+.appointmentForm{
+    background-color: #fff;
+    width: 60%;
+    margin: 10px;
+    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.appointmentHeader{
+    text-align: center;
+    padding: 10px;
+}
+.appointmentHeader h1 {
+    font-size: 26px;
+    font-weight: bold;
+}
+.appointmentForm input {
+    width: 100%;
+    background-color: #e2e2e2;
+    border: none;
+    outline: none;
+    padding: 12px 20px;
+    border-radius: 4px;
+    font-size: 14px; 
+}
+.agreeToTerms{
+    width: 60%;
+}
+input.formSubmitButton:hover{
+    background-color: #06D85F;
+    cursor: pointer;
+}
+input.formSubmitButton:active{
+    background-color: #015a26;
+}
+.searchUserData{
+    background-color: #06D85F;
+    position: absolute;
+    margin: 0;
+    width: 15%;
+    list-style: none;
+    padding: 5px;
+    border-radius: 4px;
+}
+.searchUserData li:not(:last-child){
+    border-bottom: 2px solid #fff;
+}
+.searchUserData li{
+    padding: 3px;
+}

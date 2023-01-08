@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useMemo } from "react";
 import api from "../../../api/api";
 import "./AdminStatisticsActive.css";
 import {
@@ -14,11 +14,13 @@ export default function UserCount() {
   const [availableUsers, setAvailableUsers] = useState(0);
   const [notAvailableUsers, setNotAvailableUsers] = useState(0);
   const token = localStorage.getItem("gateManagementApi");
-  const header = {
-    headers: {
-      Authorization: `Bearer ${token}`,
-    },
-  };
+  const header = useMemo(() => {
+    return {
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
+    };
+  }, [token]);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -43,7 +45,7 @@ export default function UserCount() {
       }
     };
     fetchData();
-  }, []);
+  }, [header]);
 
   return (
     <div className="AdminStatisticsContainer">

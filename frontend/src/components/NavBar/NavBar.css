@@ -42,8 +42,9 @@
 }
 .icon {
   display: none;
-  padding: 20px;
+  padding: 4px;
   border-radius: 50%;
+  box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.3);
 }
 
 .userIcon {
@@ -97,7 +98,7 @@
 .toggle button:active {
   transform: scale(1);
 }
-@media screen and (max-width: 600px) {
+/* @media screen and (max-width: 600px) {
   .container {
     margin: 0 auto;
     max-width: 600px;
@@ -131,7 +132,67 @@
     float: none;
     display: block;
     text-align: left;
-    -webkit-transition: all 0.8s; /* Safari prior 6.1 */
+    -webkit-transition: all 0.8s;
     transition: all 0.8s;
+  }
+} */
+@media screen and (min-width: 768px) and (max-width: 992px) {
+}
+@media screen and (max-width: 768px) {
+  .container {
+    display: flex;
+    /* flex-direction: column; */
+  }
+  .navigation-links li {
+    display: none;
+  }
+
+  .navigation .container {
+    display: flex;
+    align-items: center;
+  }
+
+  .icon {
+    display: block;
+    height: 25px;
+    width: 25px;
+    margin: 0 20px;
+  }
+  .navigation .logo {
+    flex: 1;
+  }
+
+  .navigation .user {
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+  }
+
+  .navigation .user button {
+    color: #fff;
+  }
+  .navigation .hamburger {
+    display: block;
+  }
+  .toggle button {
+    color: #fff;
+  }
+  .Nav-Visible li {
+    flex-direction: column;
+    display: block;
+    color: #fff;
+  }
+  .Nav-Visible {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    top: 70px;
+    height: 60vh;
+    width: 100vw;
+    background-color: rgb(83, 148, 253);
+    color: #fff;
   }
 }

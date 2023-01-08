@@ -48,7 +48,7 @@ export default function AdminUserGroupsActive() {
       }
     };
     handleAdminSearch();
-  }, [AdminSearch]);
+  }, [AdminSearch, token]);
 
   return (
     <div className="AdminGroupContainer">

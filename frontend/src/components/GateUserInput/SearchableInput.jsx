@@ -30,7 +30,7 @@ export default function SearchableInput({
       }
     };
     handleUserSearch();
-  }, [userVisitPerson]);
+  }, [userVisitPerson, setSearchWork]);
 
   return (
     <div>

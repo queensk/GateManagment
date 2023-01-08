@@ -75,3 +75,88 @@ ul.UserSearchData li:not(:last-child) {
   background-color: #06d85f;
   color: #fff;
 }
+
+@media screen and (min-width: 992px) and (max-width: 1371px) {
+  .CreateUser {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    height: 60vh;
+    padding: 20px;
+  }
+  .CreateUser input {
+    margin: 10px 10px;
+    background-color: #e2e2e2;
+    width: 60%;
+    height: 30px;
+    border: none;
+    outline: none;
+    padding: 12px 12px;
+    border-radius: 4px;
+  }
+  .AdminAddUserButton {
+    border: 2px solid #f58e49;
+    width: 60px;
+    border-radius: 10px;
+    display: flex;
+    padding: 10px 20px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  .CreateUser {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    height: 60vh;
+    padding: 20px;
+  }
+  .CreateUser input {
+    margin: 10px 10px;
+    background-color: #e2e2e2;
+    width: 60%;
+    height: 30px;
+    border: none;
+    outline: none;
+    padding: 12px 12px;
+    border-radius: 4px;
+  }
+  .AdminAddUserButton {
+    border: 2px solid #f58e49;
+    width: 60px;
+    border-radius: 10px;
+    display: flex;
+    padding: 10px 20px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .CreateUser {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    height: 60vh;
+    padding: 20px;
+  }
+  .CreateUser input {
+    margin: 10px 10px;
+    background-color: #e2e2e2;
+    width: 60%;
+    height: 30px;
+    border: none;
+    outline: none;
+    padding: 12px 12px;
+    border-radius: 4px;
+  }
+  .AdminAddUserButton {
+    border: 2px solid #f58e49;
+    width: 60px;
+    border-radius: 10px;
+    display: flex;
+    padding: 10px 20px;
+  }
+}

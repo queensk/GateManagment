@@ -1,4 +1,3 @@
-from .meeting import Meeting
 from .base_model import BaseModel, db
 from .user_appointments import UserAppointment
 from typing import List
@@ -19,14 +18,9 @@ class User(BaseModel):
         backref='user',
         lazy='dynamic',
         cascade='all, delete')
-    meetings = db.relationship(
-        'Meeting',
-        backref='user',
-        lazy='dynamic',
-        cascade='all, delete')
-
+        
     def __init__(self, name: str, email: str, password_hash: str, availability: bool = True, role: str = None,
-                 user_appointments: List[UserAppointment] = [], meetings: List[Meeting] = [], id=None):
+                 user_appointments: List[UserAppointment] = [], id=None):
         if id is None:
             self.id = str(uuid.uuid4())
         else:
@@ -50,7 +44,6 @@ class User(BaseModel):
             'name': self.name,
             'email': self.email,
             'appointments': [appointment.to_dict() for appointment in self.appointments],
-            'meetings': [meeting.to_dict() for meeting in self.meetings],
             'create_time': self.create_time,
             'updated_time': self.updated_time,
             'availability': self.availability,

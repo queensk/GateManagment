@@ -1,6 +1,8 @@
 *backend2
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
-
+*__pycache__
+*.env
+meeting.py
 # dependencies
 /node_modules
 /.pnp

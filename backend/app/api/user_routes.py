@@ -5,7 +5,7 @@ from app.Authorization.Authorization import require_auth
 
 
 class UserView(MethodView):
-    @require_auth
+    # @require_auth
     def get(self, id=None):
         if id:
             # Retrieve a single user by ID

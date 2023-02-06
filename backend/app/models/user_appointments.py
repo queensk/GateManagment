@@ -1,5 +1,4 @@
 from .base_model import BaseModel, db
-from .appointments import Appointment
 from datetime import datetime, timedelta
 from flask import jsonify
 from typing import List

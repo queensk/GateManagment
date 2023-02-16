@@ -3,6 +3,7 @@
 *__pycache__
 *.env
 meeting.py
+.envln
 # dependencies
 /node_modules
 /.pnp
@@ -13,7 +14,6 @@ meeting.py
 
 # production
 /build
-
 # misc
 .DS_Store
 .env.local

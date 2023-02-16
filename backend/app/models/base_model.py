@@ -29,18 +29,3 @@ class BaseModel(db.Model):
     create_time: str = db.Column(db.DateTime, default=datetime.utcnow)
     updated_time: str = db.Column(db.DateTime, default=datetime.utcnow,
                                   onupdate=datetime.utcnow)
-
-    def __init__(self, id, create_time, update_time, *args, **kwargs):
-        self.id = id,
-        self.create_time = create_time,
-        self.updated_time = update_time
-
-    def save(self):
-        db.session.add(self)
-        db.session.commit()
-        db.session.close()
-
-    def delete(self):
-        db.session.delete(self)
-        db.session.commit()
-        db.session.close()

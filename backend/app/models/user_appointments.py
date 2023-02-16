@@ -8,6 +8,7 @@ import uuid
 
 class UserAppointment(BaseModel):
     __tablename__ = 'userAppointments'
+    # __allow_unmapped__ = True
     first_name: str = db.Column(db.String(120))
     last_name: str = db.Column(db.String(120))
     user_email: str = db.Column(db.String(120))

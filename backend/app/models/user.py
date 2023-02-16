@@ -8,6 +8,7 @@ from passlib.hash import pbkdf2_sha256
 
 class User(BaseModel):
     __tablename__ = 'users'
+    # __allow_unmapped__ = True
     name: str = db.Column(db.String(), index=True)
     email: str = db.Column(db.String(), index=True, unique=True)
     password_hash: str = db.Column(db.String())
@@ -18,7 +19,7 @@ class User(BaseModel):
         backref='user',
         lazy='dynamic',
         cascade='all, delete')
-        
+
     def __init__(self, name: str, email: str, password_hash: str, availability: bool = True, role: str = None,
                  user_appointments: List[UserAppointment] = [], id=None):
         if id is None:
@@ -54,7 +55,6 @@ class User(BaseModel):
         self.name = name
         self.email = email
         self.password_hash = pbkdf2_sha256.hash(password_hash)
-        db.session.commit()
 
     def update_patch(self, **kwargs):
         for key, value in kwargs.items():
@@ -63,7 +63,6 @@ class User(BaseModel):
 
     def save(self):
         db.session.add(self)
-        db.session.commit()
 
     def delete(self):
         db.session.delete(self)

@@ -12,7 +12,7 @@ export default function AgreeToTerms({
         label=""
         type="text"
         name="name"
-        placeholder="John Duke"
+        placeholder="Dennis Gitonga"
         value={termsSignatureName}
         setValue={setTermsSignature}
       />

@@ -58,7 +58,7 @@ export default function HomeForm() {
           label="First Name"
           type="text"
           name="firstName"
-          placeholder="John"
+          placeholder="Dennis"
           value={firstName}
           setValue={setFirstName}
         />
@@ -66,7 +66,7 @@ export default function HomeForm() {
           label="Last Name"
           type="text"
           name="lastName"
-          placeholder="Duke"
+          placeholder="Gitonga"
           value={lastName}
           setValue={setLastName}
         />
@@ -74,7 +74,7 @@ export default function HomeForm() {
           label="Your Email"
           type="email"
           name="lastName"
-          placeholder="johnduke@gmail.com"
+          placeholder="Gitonga@gmail.com"
           value={userEmail}
           setValue={setUserEmail}
         />
